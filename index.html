@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="description" content="첨단교육팀 구성원의 업무와 프로젝트를 소개하는 개인 포트폴리오입니다." />
+  <title>Portfolio | My Work & Story</title>
+  <style>
+    :root { color-scheme:light; --ink:#111827;--muted:#627086;--bg:#f7f9fc;--line:#e4eaf2;--brand:#4458e8;--brand2:#7485fb;--white:#fff;--shadow:0 18px 58px rgba(22,37,87,.07); }
+    * {box-sizing:border-box} html {scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.7;word-break:keep-all} a{color:inherit;text-decoration:none} button{font:inherit} ::selection{background:#dfe5ff;color:#2232a1}
+    .shell{max-width:1160px;padding:0 28px;margin:0 auto}.topbar{position:sticky;top:0;z-index:50;background:rgba(248,250,252,.87);backdrop-filter:blur(16px);border-bottom:1px solid rgba(226,232,240,.75)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:11px;font-size:15px;font-weight:850;letter-spacing:-.04em}.logo-mark{display:grid;place-items:center;width:36px;height:36px;background:#192640;color:white;border-radius:11px;font-size:14px;letter-spacing:-.08em}.navlinks{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700;color:#64718a}.navlinks a:hover,.navlinks a:focus-visible{color:var(--brand)}.navcta{background:var(--ink);color:white!important;padding:10px 17px;border-radius:10px}.navcta:hover{background:var(--brand)}
+    .hero{position:relative;overflow:hidden;padding:110px 0 94px}.hero:before{content:'';position:absolute;width:620px;height:620px;right:-240px;top:-210px;background:radial-gradient(circle,rgba(101,128,242,.12),transparent 66%);pointer-events:none}.hero-content{position:relative;max-width:790px}.eyebrow{display:inline-flex;gap:9px;align-items:center;padding:8px 13px;border:1px solid #dae2f0;border-radius:100px;background:#fff;color:#58657b;font-size:12px;font-weight:800;letter-spacing:.025em}.dot{width:7px;height:7px;border-radius:50%;background:#687bff;box-shadow:0 0 0 4px #edf0ff}.hero h1{font-size:clamp(40px,6vw,76px);letter-spacing:-.075em;line-height:1.21;margin:30px 0 24px;font-weight:850}.gradient{background:linear-gradient(110deg,#2b40c2,#7785fa);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-lead{max-width:610px;font-size:clamp(16px,2vw,19px);line-height:1.9;color:#647187;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 21px;border-radius:12px;border:1px solid #dce3ee;font-weight:800;font-size:14px;background:white;transition:transform .18s,box-shadow .18s,background .18s;cursor:pointer}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(32,47,97,.12)}.btn-primary{background:#283bca;color:white;border-color:#283bca}.btn-primary:hover{background:#1b2cae}.arrow{font-size:19px;line-height:1}.quick-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:43px}.meta-item{display:flex;gap:8px;align-items:center;color:#738096;font-size:12px;font-weight:650}.meta-item+ .meta-item:before{content:'·';margin-right:5px;color:#aab4c3}
+    section{scroll-margin-top:95px}.section{padding:48px 0 84px}.section-head{display:flex;justify-content:space-between;gap:22px;align-items:flex-end;margin-bottom:30px}.kicker{font-size:12px;letter-spacing:.16em;font-weight:900;color:#5368e5;text-transform:uppercase}.section-title{font-size:clamp(27px,3vw,36px);letter-spacing:-.055em;line-height:1.3;margin:7px 0 0}.section-description{font-size:14px;color:var(--muted);margin:0;max-width:440px}.panel{background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:20px}.about-card{padding:38px}.about-card h3{font-size:23px;letter-spacing:-.04em;line-height:1.5;margin:0 0 18px}.about-card p{color:var(--muted);font-size:15px;line-height:2;margin:0}.profile-card{padding:34px;background:linear-gradient(145deg,#202f64,#344dc0);color:white;border-color:transparent;display:flex;flex-direction:column;justify-content:space-between;min-height:290px}.profile-label{color:#b5c3ff;font-size:11px;letter-spacing:.16em;font-weight:900}.profile-card h3{font-size:28px;margin:15px 0 7px;letter-spacing:-.055em}.profile-card p{color:#d7dfff;font-size:14px;margin:0}.profile-footer{padding-top:25px;margin-top:30px;border-top:1px solid #ffffff33;font-size:13px;color:#e7ebff}
+    .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.work-card{padding:29px;min-height:230px;transition:transform .2s,border-color .2s}.work-card:hover{transform:translateY(-4px);border-color:#bec9fc}.work-icon{display:grid;place-items:center;width:45px;height:45px;border-radius:14px;background:#eef1ff;color:#4458df;font-size:23px;font-weight:700;margin-bottom:24px}.work-card h3{font-size:18px;letter-spacing:-.04em;margin:0 0 9px}.work-card p{font-size:13px;color:var(--muted);margin:0;line-height:1.9}.sample{display:inline-block;color:#909bad;font-size:11px;font-weight:700;margin-top:12px}
+    .career{display:grid;grid-template-columns:1fr 1fr;gap:18px}.career-card{padding:30px}.small-label{font-size:11px;font-weight:900;color:#6273d9;letter-spacing:.11em}.career-card h3{font-size:18px;letter-spacing:-.035em;margin:11px 0 8px}.career-card p{font-size:14px;color:var(--muted);margin:0}.career-card .sample{margin-top:18px}
+    .projects-note{color:#718098;font-size:13px}.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project-link{display:flex;flex-direction:column;min-height:310px;padding:30px;background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}.project-link:hover{transform:translateY(-7px);box-shadow:0 22px 54px rgba(50,61,133,.13);border-color:#9bacfa}.project-link:focus-visible{outline:3px solid #8b9cff;outline-offset:4px}.project-number{font-size:65px;line-height:1.1;font-weight:850;color:#e5eaff;letter-spacing:-.075em}.project-tag{color:#5469d7;font-size:11px;font-weight:900;letter-spacing:.12em;margin-top:auto}.project-link h3{font-size:23px;letter-spacing:-.055em;margin:10px 0 8px}.project-link p{color:#7b879a;font-size:13px;margin:0;line-height:1.8}.project-arrow{position:absolute;top:29px;right:27px;width:34px;height:34px;display:grid;place-items:center;border-radius:100px;background:#f0f3ff;color:#364cca;font-size:20px;transition:transform .2s}.project-link:hover .project-arrow{transform:translate(3px,-3px)}.project-link:nth-child(2) .project-number{color:#e5f4f3}.project-link:nth-child(2) .project-tag{color:#188c85}.project-link:nth-child(2) .project-arrow{background:#e6f6f3;color:#17877d}.project-link:nth-child(3) .project-number{color:#f6e9df}.project-link:nth-child(3) .project-tag{color:#a66c37}.project-link:nth-child(3) .project-arrow{background:#fcf1e6;color:#a66c37}
+    .contact{margin:20px 0 80px;padding:46px;display:flex;justify-content:space-between;align-items:center;gap:30px;background:#15213c;color:white;border-radius:24px;overflow:hidden;position:relative}.contact:after{content:'';position:absolute;right:-90px;top:-130px;width:370px;height:370px;border-radius:50%;border:60px solid rgba(255,255,255,.045);pointer-events:none}.contact > *{position:relative;z-index:1}.contact h2{margin:0 0 9px;font-size:27px;letter-spacing:-.05em}.contact p{margin:0;font-size:14px;color:#bfc9dc}.contact .btn{white-space:nowrap}.footer{border-top:1px solid var(--line);padding:30px 0 45px;color:#8b96a7;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,24px);background:#17213a;color:white;padding:12px 20px;border-radius:12px;font-size:13px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;box-shadow:0 16px 32px #0d17332e;z-index:99;text-align:center;max-width:calc(100vw - 32px)}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media (max-width:820px){.navlinks{gap:16px}.navlinks a:not(.navcta){display:none}.hero{padding:80px 0 66px}.about-grid,.career{grid-template-columns:1fr}.work-grid,.project-grid{grid-template-columns:1fr 1fr}.contact{padding:34px}.section{padding:38px 0 66px}}@media(max-width:570px){.shell{padding:0 20px}.nav{height:67px}.navcta{padding:9px 13px}.hero{padding:68px 0 59px}.hero h1{font-size:42px;margin:23px 0 20px}.hero-lead{font-size:15px}.quick-meta{margin-top:30px}.section-head{display:block}.section-description{margin-top:12px}.about-card,.profile-card{padding:27px}.work-grid,.project-grid{grid-template-columns:1fr}.work-card{min-height:0}.project-link{min-height:260px}.career-card{padding:25px}.contact{display:block;padding:29px;margin-bottom:55px}.contact h2{font-size:24px}.contact .btn{margin-top:25px}.footer-inner{display:block}.footer-inner span{display:block;margin:5px 0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+    /* Visibility-first refinement: stronger contrast, clearer hierarchy, prominent quick navigation */
+    :root{--ink:#101b33;--muted:#465671;--bg:#f3f6fc;--line:#cfd9e9;--brand:#244be0;--shadow:0 12px 36px rgba(25,43,83,.09)}
+    body{font-size:16px;line-height:1.75}
+    .topbar{background:rgba(255,255,255,.95);border-bottom:1px solid #dce4f1}
+    .navlinks{font-size:14px;color:#33445d}
+    .navcta{background:#244be0!important;color:#fff!important;padding:12px 20px}
+    .hero{padding:88px 0 65px;background:linear-gradient(122deg,#f4f7ff 0%,#ffffff 58%,#edf3ff 100%)}
+    .hero-content{max-width:970px}
+    .eyebrow{background:#e8eeff;color:#263da2;border-color:#cbd6ff;font-size:13px;padding:9px 15px}
+    .hero h1{font-size:clamp(43px,5.9vw,76px);line-height:1.18;letter-spacing:-.07em;margin:24px 0 19px}
+    .gradient{background:linear-gradient(100deg,#2144d2,#5476e7);-webkit-background-clip:text;background-clip:text}
+    .hero-lead{color:#3d4c66;font-size:clamp(17px,2vw,20px);line-height:1.8}
+    .btn{min-height:54px;font-size:15px;border-color:#cbd6ea}
+    .btn-primary{background:#244be0;border-color:#244be0;box-shadow:0 9px 22px rgba(36,75,224,.2)}
+    .btn-primary:hover{background:#1736bc}
+    .quick-meta{margin-top:28px}.meta-item{color:#485b7d;font-size:13px}
+    .quick-links{margin-top:40px;padding:22px;border:1px solid #d5dff4;background:#fff;border-radius:22px;box-shadow:0 16px 45px rgba(22,45,98,.08)}
+    .quick-links-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px;flex-wrap:wrap}
+    .quick-links-title{font-size:16px;font-weight:850;color:#1b2c50;letter-spacing:-.03em}
+    .quick-links-hint{font-size:12px;color:#566681;font-weight:650}
+    .quick-links-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .quick-link{display:flex;align-items:center;gap:14px;padding:17px 16px;border:2px solid #dde5f3;border-radius:15px;background:#f8faff;transition:background .16s,transform .16s,border-color .16s,box-shadow .16s}
+    .quick-link:hover,.quick-link:focus-visible{background:#edf2ff;border-color:#637ae7;transform:translateY(-3px);box-shadow:0 9px 22px rgba(36,75,224,.11);outline:none}
+    .quick-digit{display:grid;place-items:center;flex:none;width:53px;height:53px;border-radius:13px;background:#244be0;color:#fff;font-size:25px;font-weight:900;line-height:1}
+    .quick-link:nth-child(2) .quick-digit{background:#087d77}.quick-link:nth-child(3) .quick-digit{background:#a45d20}
+    .quick-label{font-size:16px;color:#182944;font-weight:850;line-height:1.45;letter-spacing:-.035em}
+    .quick-sub{display:block;margin-top:3px;color:#566781;font-size:12px;font-weight:600}
+    .quick-chevron{margin-left:auto;color:#244be0;font-size:21px;font-weight:850}
+    .section{padding:65px 0 76px}.section-title{font-size:clamp(30px,3vw,38px)}
+    .kicker{font-size:13px;color:#244be0}.section-description{color:#4a5971;font-size:15px}
+    .about-card p,.work-card p,.career-card p{color:#465570;font-size:15px;line-height:1.85}
+    .work-card{min-height:250px}.work-icon{background:#e5ebff;color:#244be0;width:54px;height:54px;font-size:27px}
+    .work-card h3,.career-card h3{font-size:20px}.sample{font-size:12px;color:#596b8a}
+    #projects{background:linear-gradient(180deg,#eaf0ff 0%,#f2f6ff 100%);border-block:1px solid #d9e4ff}
+    .project-link{border:2px solid #cbd7f3;min-height:325px;box-shadow:0 15px 32px rgba(27,56,111,.08)}
+    .project-number{font-size:78px;color:#3153d3!important;letter-spacing:-.07em}
+    .project-link:nth-child(2) .project-number{color:#07847d!important}.project-link:nth-child(3) .project-number{color:#a86225!important}
+    .project-link h3{font-size:24px;color:#182943}.project-link p{font-size:14px;color:#4b5d77}
+    .project-arrow{width:43px;height:43px;background:#e4eaff;font-size:25px}
+    .project-link:focus-visible,.btn:focus-visible,.navlinks a:focus-visible{outline:3px solid #405ff0;outline-offset:4px}
+    .projects-note{color:#465873;font-size:13px;margin-top:19px}
+    @media(max-width:850px){.quick-links-grid{grid-template-columns:1fr}.quick-link{min-height:77px}.hero{padding:72px 0 54px}}
+    @media(max-width:570px){.hero{padding:52px 0 45px}.hero h1{font-size:40px}.hero-lead{font-size:16px}.hero-actions{margin-top:26px}.hero-actions .btn{width:100%}.quick-links{padding:17px;margin-top:28px}.quick-link{padding:12px}.quick-digit{width:48px;height:48px;font-size:23px}.quick-label{font-size:15px}.section{padding:49px 0 56px}.project-link{min-height:260px}.section-description{font-size:14px}}
+
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="주 메뉴">
+      <a class="logo" href="#home" aria-label="홈으로"><span class="logo-mark">P.</span><span>MY PORTFOLIO</span></a>
+      <div class="navlinks"><a href="#about">소개</a><a href="#work">담당 업무</a><a href="#career">경력</a><a class="navcta" href="#projects">프로젝트 보기 ↗</a></div>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="hero"><div class="shell"><div class="hero-content">
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> WORK · IDEAS · GROWTH</span>
+      <h1>생각을 구조화하고,<br /><span class="gradient">아이디어를 현실로.</span></h1>
+      <p class="hero-lead">안녕하세요. 첨단교육팀에서 일하고 있습니다.<br />기획과 실행을 연결하며, 더 나은 업무 경험을 만드는 데 관심이 있습니다.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#projects">포트폴리오 둘러보기 <span class="arrow" aria-hidden="true">↗</span></a><a class="btn" href="#about">자기소개 보기 <span class="arrow" aria-hidden="true">→</span></a></div>
+      <div class="quick-meta"><span class="meta-item">소속 · 첨단교육팀</span><span class="meta-item">분야 · 기획 / 디지털 업무</span><span class="meta-item">포트폴리오 · 2026</span></div>
+      <div class="quick-links" aria-label="프로젝트 바로가기">
+        <div class="quick-links-head"><strong class="quick-links-title">프로젝트 바로가기</strong><span class="quick-links-hint">아래 번호를 선택해 결과물 확인 ↗</span></div>
+        <div class="quick-links-grid">
+          <a class="quick-link" href="1.html" aria-label="1번 기획문서 MD 페이지 열기"><span class="quick-digit">1</span><span class="quick-label">기획문서 MD<span class="quick-sub">문서 기획 및 정리</span></span><span class="quick-chevron" aria-hidden="true">↗</span></a>
+          <a class="quick-link" href="2.html" aria-label="2번 바이브코딩 결과물 페이지 열기"><span class="quick-digit">2</span><span class="quick-label">바이브코딩 결과물<span class="quick-sub">웹 구현 및 프로토타입</span></span><span class="quick-chevron" aria-hidden="true">↗</span></a>
+          <a class="quick-link" href="3.html" aria-label="3번 슬라이드 페이지 열기"><span class="quick-digit">3</span><span class="quick-label">슬라이드<span class="quick-sub">발표 및 시각화 자료</span></span><span class="quick-chevron" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div></div></section>
+    <section id="about" class="section"><div class="shell"><div class="section-head"><div><span class="kicker">01 / ABOUT</span><h2 class="section-title">저를 소개합니다</h2></div><p class="section-description">업무의 목적을 이해하고, 복잡한 내용을 명확하게 전달하는 것을 지향합니다.</p></div>
+      <div class="about-grid"><article class="panel about-card"><h3>문제를 발견하고,<br />실행 가능한 방법을 고민합니다.</h3><p>정보를 체계적으로 정리하고, 필요한 사람에게 이해하기 쉽게 전달하는 데 가치를 둡니다. 새로운 디지털 도구를 탐색하고 실무에 적용하며 업무 방식의 개선 가능성을 찾고 있습니다.</p><span class="sample">※ 소개 문구는 수정 가능한 예시입니다.</span></article><aside class="panel profile-card"><div><span class="profile-label">CURRENT AFFILIATION</span><h3>첨단교육팀</h3><p>Education · Planning · Digital Innovation</p></div><div class="profile-footer">관심 키워드 &nbsp; #업무기획 &nbsp; #콘텐츠 &nbsp; #디지털도구</div></aside></div>
+    </div></section>
+    <section id="work" class="section"><div class="shell"><div class="section-head"><div><span class="kicker">02 / WHAT I DO</span><h2 class="section-title">담당 업무와 관심 분야</h2></div><p class="section-description">아래 세부 업무는 예시입니다. 실제 담당 업무에 맞게 문구를 수정해 주세요.</p></div>
+      <div class="work-grid"><article class="panel work-card"><div class="work-icon" aria-hidden="true">▤</div><h3>기획 및 문서화</h3><p>업무 목표를 정리하고, 실행을 위한 기획서·보고서·운영 문서를 체계적으로 구성합니다.</p><span class="sample">예시 업무 · 확인 후 수정</span></article><article class="panel work-card"><div class="work-icon" aria-hidden="true">◇</div><h3>교육·콘텐츠 운영</h3><p>학습자와 실무자의 관점을 고려해 교육 관련 콘텐츠와 운영 흐름을 설계합니다.</p><span class="sample">예시 업무 · 확인 후 수정</span></article><article class="panel work-card"><div class="work-icon" aria-hidden="true">⌘</div><h3>디지털 업무 개선</h3><p>AI 및 웹 기반 도구를 활용해 반복 업무를 효율화하고 새로운 방식의 결과물을 실험합니다.</p><span class="sample">예시 업무 · 확인 후 수정</span></article></div>
+    </div></section>
+    <section id="career" class="section"><div class="shell"><div class="section-head"><div><span class="kicker">03 / EXPERIENCE</span><h2 class="section-title">주요 경력 및 역량</h2></div><p class="section-description">확인되지 않은 근무 기간, 직급, 성과는 기재하지 않았습니다.</p></div>
+      <div class="career"><article class="panel career-card"><span class="small-label">CURRENT</span><h3>첨단교육팀</h3><p>현재 소속 조직</p></article><article class="panel career-card"><span class="small-label">EXPERIENCE & SKILLS</span><h3>경력 정보를 추가해 주세요</h3><p>이전 소속, 주요 프로젝트, 전문 역량, 자격 및 성과 등을 입력할 수 있습니다.</p><span class="sample">추가 확인 필요 · 경력 / 재직 기간 / 성과</span></article></div>
+    </div></section>
+    <section id="projects" class="section"><div class="shell"><div class="section-head"><div><span class="kicker">04 / SELECTED WORK</span><h2 class="section-title">프로젝트 살펴보기</h2></div><p class="section-description">번호를 클릭하면 해당 HTML 페이지로 이동합니다.</p></div>
+      <div class="project-grid"><a class="project-link" href="1.html" data-project="1.html" aria-label="1번 기획문서 MD 페이지로 이동"><span class="project-arrow" aria-hidden="true">↗</span><span class="project-number">01</span><span class="project-tag">DOCUMENTATION</span><h3>기획문서 MD</h3><p>아이디어를 구체적인 계획과 문서로 정리한 작업물</p></a><a class="project-link" href="2.html" data-project="2.html" aria-label="2번 바이브코딩 결과물 페이지로 이동"><span class="project-arrow" aria-hidden="true">↗</span><span class="project-number">02</span><span class="project-tag">BUILD & EXPLORE</span><h3>바이브코딩 결과물</h3><p>아이디어를 웹 기반 프로토타입으로 구현한 작업물</p></a><a class="project-link" href="3.html" data-project="3.html" aria-label="3번 슬라이드 페이지로 이동"><span class="project-arrow" aria-hidden="true">↗</span><span class="project-number">03</span><span class="project-tag">PRESENTATION</span><h3>슬라이드</h3><p>핵심 메시지를 시각적으로 전달하는 발표 자료</p></a></div>
+      <p class="projects-note">※ 1.html, 2.html, 3.html은 추후 연결할 파일입니다. 같은 폴더에 저장하면 자동으로 연결됩니다.</p>
+    </div></section>
+    <div class="shell"><aside class="contact"><div><h2>아이디어를 결과로 연결하는 과정</h2><p>계획하고, 만들고, 공유한 경험을 이곳에 차곡차곡 담겠습니다.</p></div><a class="btn" href="#home">맨 위로 돌아가기 ↑</a></aside></div>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><span>© <span id="year">2026</span> My Portfolio. All rights reserved.</span><span>Designed for clarity & impact.</span></div></footer>
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toast = document.getElementById('toast'); let toastTimer;
+    function notify(message) { toast.textContent = message; toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2300); }
+    document.querySelectorAll('[data-project]').forEach(link => {
+      link.addEventListener('click', event => {
+        // 링크는 항상 실제 지정된 파일을 향합니다. 파일이 아직 없다면 안내합니다.
+        const fileName = link.dataset.project;
+        if (location.protocol === 'file:') {
+          // 로컬 파일에서는 존재 여부를 안정적으로 검사할 수 없어 기본 링크 동작을 유지합니다.
+          return;
+        }
+        // 별도 파일이 준비되면 정상 이동합니다. 모든 페이지는 같은 폴더에 둡니다.
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', () => {
+      if(link.getAttribute('href') === '#home') notify('페이지 상단으로 이동합니다.');
+    }));
+  </script>
+</body>
+</html>
