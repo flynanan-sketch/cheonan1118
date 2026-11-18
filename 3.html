@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff8ee"><meta name="description" content="맛있는 여행, 천안 — 천안의 호두과자, 병천순대, 맛집과 하루 미식 코스를 소개하는 인터랙티브 웹 프레젠테이션">
+<title>맛있는 여행, 천안 | CHEONAN FOOD TRIP</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+<script src="slides-data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#presentation">프레젠테이션으로 건너뛰기</a>
+<div class="app" id="app">
+<header class="topbar">
+  <a class="brand" href="#slide-1" aria-label="처음 슬라이드로"><span class="brand-mark">C<span>●</span></span><span class="brand-name">CHEONAN <b>FOOD TRIP</b><small>맛있는 여행, 천안</small></span></a>
+  <div class="top-center"><span class="eyebrow">EXPLORE CHEONAN</span><span id="current-title" class="top-title">맛있는 도시, 천안</span></div>
+  <nav class="top-actions" aria-label="프레젠테이션 도구">
+    <button class="nav-tool" id="outline-btn" title="전체 슬라이드 목차" aria-controls="outline" aria-expanded="false"><span class="icon">☷</span><span class="desktop-label">목차</span></button>
+    <button class="nav-tool" id="details-btn" title="슬라이드 텍스트 및 출처" aria-controls="details" aria-expanded="false"><span class="icon">ⓘ</span><span class="desktop-label">상세 정보</span></button>
+    <button class="nav-tool" id="fullscreen-btn" title="전체 화면"><span class="icon">⛶</span><span class="desktop-label">전체 화면</span></button>
+  </nav>
+</header>
+<main class="main" id="presentation">
+ <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+ <div class="workspace">
+  <div class="slide-heading"><div class="section-indicator"><span class="orange-dot"></span><span id="section-label">WELCOME</span></div><div class="slide-count" aria-live="polite"><strong id="slide-current">01</strong><span class="slash">/</span><span>10</span></div></div>
+  <div class="slide-shell" id="slide-shell" tabindex="0" aria-label="프레젠테이션 슬라이드. 좌우 방향키로 이동할 수 있습니다.">
+   <div class="slide-stage" id="slide-stage" aria-live="off"><img id="active-slide" class="slide-image" src="assets/slides/slide-01.webp" alt="슬라이드 1: 맛있는 도시, 천안으로 떠나는 미식 여행" width="1600" height="900"></div>
+   <button class="edge-button previous" id="prev-edge" title="이전 슬라이드" aria-label="이전 슬라이드">‹</button>
+   <button class="edge-button next" id="next-edge" title="다음 슬라이드" aria-label="다음 슬라이드">›</button>
+  </div>
+  <div class="control-area">
+   <div class="controls-left"><span class="live-label"><i></i> PRESENTATION MODE</span><span class="control-hint">← → 키로 이동 · 터치 스와이프 지원</span></div>
+   <div class="controls-center"><button class="circle-btn" id="prev-btn" aria-label="이전 슬라이드">←</button><button id="play-btn" class="play-btn" aria-label="자동 재생 시작" title="슬라이드 자동 재생">▶ <span id="play-text">자동 재생</span></button><button class="circle-btn" id="next-btn" aria-label="다음 슬라이드">→</button></div>
+   <button class="shortcut" id="help-btn" title="키보드 단축키">? <span>단축키</span></button>
+  </div>
+  <div class="progress-track" id="progress-track" role="progressbar" aria-label="슬라이드 진행률" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1"><div id="progress-fill"></div></div>
+  <div class="filmstrip" id="filmstrip" aria-label="슬라이드 미리보기"></div>
+ </div>
+</main>
+<footer class="footer"><span>CHEONAN FOOD JOURNEY</span><span>천안의 맛을 만나는 10가지 장면</span><span>© CHEONAN FOOD TRIP</span></footer>
+<div id="scrim" class="scrim" hidden></div>
+<aside class="drawer" id="outline" role="dialog" aria-modal="true" aria-label="슬라이드 목차" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">CONTENTS</span><h2>슬라이드 목차</h2></div><button class="drawer-close" data-close aria-label="목차 닫기">×</button></div><div class="outline-list" id="outline-list"></div></aside>
+<aside class="drawer" id="details" role="dialog" aria-modal="true" aria-label="슬라이드 상세 정보" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">SLIDE NOTES</span><h2>슬라이드 상세 정보</h2></div><button class="drawer-close" data-close aria-label="상세 정보 닫기">×</button></div><div id="details-content" class="details-content"></div></aside>
+<div class="modal" id="help-modal" role="dialog" aria-modal="true" aria-labelledby="help-title" aria-hidden="true"><div class="modal-card"><div class="modal-header"><div><span class="eyebrow">KEYBOARD SHORTCUTS</span><h2 id="help-title">빠른 조작 안내</h2></div><button class="drawer-close" id="help-close" aria-label="도움말 닫기">×</button></div><dl class="shortcuts"><div><dt>← / →</dt><dd>이전 / 다음 슬라이드</dd></div><div><dt>Home / End</dt><dd>처음 / 마지막 슬라이드</dd></div><div><dt>Space</dt><dd>다음 슬라이드</dd></div><div><dt>F</dt><dd>전체 화면</dd></div><div><dt>Esc</dt><dd>열린 창 닫기</dd></div></dl><p>모바일에서는 슬라이드를 좌우로 밀어 이동할 수 있습니다.</p></div></div>
+<noscript><div class="nojs">이 웹 프레젠테이션의 탐색 기능에는 JavaScript가 필요합니다. 기본 첫 번째 슬라이드는 위에 표시됩니다.</div></noscript>
+</div>
+</body>
+</html>
